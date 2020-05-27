@@ -1,3 +1,10 @@
+## Notice for SilverStripe 4 users
+
+This module is for SilverStripe v3 only. SilverStripe 4 supports many email services through configuration only by providing a wrapper for SwiftMailer. Postmark takes some extra work to set up though, because SS4 uses SwiftMailer v5, and the official Postmark adapter for that version is incomplete. Here are a couple of different approaches for working around the issue:
+
+* [Use patched fork through composer](https://forum.silverstripe.org/t/using-postmark-with-swift-mailer-on-ss4-2/873)
+* [Create custom transport in project](https://gist.github.com/wilr/d32a0e83af3489538603f1b2f18dc73a)
+
 # SilverStripe Postmark Mailer
 
 This module lets you send SilverStripe emails through the [official Postmark PHP library](https://github.com/wildbit/postmark-php), falling back to PHP's built-in `sendmail()` if Postmark is unreachable.
